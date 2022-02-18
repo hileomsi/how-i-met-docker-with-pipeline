@@ -55,7 +55,7 @@ docker push <AWS_ACCOUNT_NUMBER>.dkr.ecr.us-east-1.amazonaws.com/hileomsi/api:la
 
 ##### Setup Secrets by Env
 
-Enter `Repository` page > `Settings` tab > `Environments` tab > Create your environment > Create you secrets
+Enter `Repository` page > `Settings` tab > `Environments` tab > Create your environment > Create your secrets
 
 
 ### Brainstorm
