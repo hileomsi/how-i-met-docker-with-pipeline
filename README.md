@@ -32,7 +32,7 @@ Create Lifecycle Policy > Select `Match criteria` > `Image count more than`
 Setup Docker login
 
 ```
-aws ecr get-login-password --region us-east-1 | docker login --username <USERNAME> --password-stdin <AWS_ADDRESS>.dkr.ecr.us-east-1.amazonaws.com
+aws ecr get-login-password --region us-east-1 | docker login --username <USERNAME> --password-stdin <AWS_ACCOUNT_NUMBER>.dkr.ecr.us-east-1.amazonaws.com
 ```
 
 Build Docker image
@@ -44,14 +44,18 @@ docker build -t hileomsi/api:<VERSION> .
 Create remote tag for image
 
 ```
-docker tag hileomsi/api:<VERSION> <AWS_ADDRESS>.dkr.ecr.us-east-1.amazonaws.com/hileomsi/api:<VERSION>
+docker tag hileomsi/api:<VERSION> <AWS_ACCOUNT_NUMBER>.dkr.ecr.us-east-1.amazonaws.com/hileomsi/api:<VERSION>
 ```
 
 Push Docker image for remote repository
 
 ```
-docker push <AWS_ADDRESS>.dkr.ecr.us-east-1.amazonaws.com/hileomsi/api:latest
+docker push <AWS_ACCOUNT_NUMBER>.dkr.ecr.us-east-1.amazonaws.com/hileomsi/api:latest
 ```
+
+##### Setup Secrets by Env
+
+Enter `Repository` page > `Settings` tab > `Environments` tab > Create your environment > Create you secrets
 
 
 ### Brainstorm
