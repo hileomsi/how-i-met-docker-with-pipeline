@@ -7,12 +7,11 @@ on:
         description: "Set tag version"
         required: true
         type: string
-      
-
 
 jobs:
   deploy-api:
     runs-on: ubuntu-latest
+    environment: STAGING
     steps:
       - name: Checkout
         uses: actions/checkout@v2
