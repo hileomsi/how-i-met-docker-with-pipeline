@@ -28,4 +28,4 @@ jobs:
         with:
           context: api/.
           push: true
-          tags: hileomsi/api:${{ github.event.inputs.tag }}
+          tags: ${{ secrets.AWS_ACCOUNT_NUMBER }}.dkr.ecr.us-east-1.amazonaws.com/hileomsi/api:${{ github.event.inputs.tag }}
