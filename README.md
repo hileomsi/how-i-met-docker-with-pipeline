@@ -1,18 +1,18 @@
 # how-i-met-docker-with-pipeline
 
 
-##### Build Image
+### Build Image
 
 - Inside `api` folder
 - ```docker build . -t hileomsi/api```
 
 
-##### Run Image
+### Run Image
 
 - ```docker run -d -p 4000:4000 hileomsi/api```
 
 
-##### Setup AWS CLI Credentials
+### Setup AWS CLI Credentials
 
 Use AWS CLI Config comand
 - ```aws configure```
@@ -53,7 +53,7 @@ Push Docker image for remote repository
 docker push <AWS_ACCOUNT_NUMBER>.dkr.ecr.us-east-1.amazonaws.com/hileomsi/api:latest
 ```
 
-##### Setup Secrets by Env
+### Setup Secrets by Env
 
 Enter `Repository` page > `Settings` tab > `Environments` tab > Create your environment > Create your secrets
 
